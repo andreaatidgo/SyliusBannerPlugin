@@ -66,6 +66,13 @@ $ bin/console doctrine:migrations:diff
 $ bin/console doctrine:migrations:migrate
 ```
 
+### Install assets & clear cache
+
+```bash
+$ bin/console assets:install
+$ bin/console cache:clear
+```
+
 ## Usage
 
 ##### 1. Create a banner from the admin.
