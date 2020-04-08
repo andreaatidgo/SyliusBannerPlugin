@@ -1,0 +1,10 @@
+jchr86_sylius_banner_by_code:
+    path: /banner-by-code/{code}
+    methods: [GET]
+    defaults:
+        _controller: jchr86_sylius_banner.controller.banner:showAction
+        _sylius:
+            template: $template
+            repository:
+                method: getOneByCode
+                arguments: [$code]

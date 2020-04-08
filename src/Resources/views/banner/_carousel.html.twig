@@ -1,0 +1,5 @@
+{% if banner.images.count > 1 %}
+    {{ include('@Jchr86SyliusBannerPlugin/banner/_slick.html.twig') }}
+{% else %}
+    {{ include('@Jchr86SyliusBannerPlugin/banner/_single.html.twig') }}
+{% endif %}

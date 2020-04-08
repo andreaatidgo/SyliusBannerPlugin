@@ -1,0 +1,11 @@
+{% set image = banner.images.first %}
+{% if image.hasLink %}
+    <a href="{{ image.link }}">
+        {% block image %}
+            <img class="ui fluid image" src="{{ image.path|imagine_filter(filter|default('sylius_shop_product_original')) }}">
+        {% endblock %}
+    </a>
+{% else %}
+    {{ block('image') }}
+{% endif %}
+<div class="ui hidden divider"></div>

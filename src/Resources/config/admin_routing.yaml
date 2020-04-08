@@ -1,0 +1,15 @@
+jchr86_banner_admin_banner:
+    resource: |
+        alias: jchr86_sylius_banner.banner
+        section: admin
+        templates: SyliusAdminBundle:Crud
+        redirect: update
+        grid: jchr86_sylius_banner_admin_banner
+        vars:
+            all:
+                subheader: jchr86_sylius_banner.ui.manage_banners
+                templates:
+                    form: '@Jchr86SyliusBannerPlugin/admin/banner/_form.html.twig'
+            index:
+                icon: 'file image outline'
+    type: sylius.resource

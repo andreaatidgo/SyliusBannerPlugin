@@ -1,0 +1,4 @@
+imports:
+    - { resource: "@Jchr86SyliusBannerPlugin/Resources/config/sylius/resource.yaml" }
+    - { resource: "@Jchr86SyliusBannerPlugin/Resources/config/sylius/grid.yaml" }
+    - { resource: "@Jchr86SyliusBannerPlugin/Resources/config/sylius/ui.yaml" }

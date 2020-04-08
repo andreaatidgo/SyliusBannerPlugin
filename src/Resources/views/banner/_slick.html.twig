@@ -1,0 +1,43 @@
+<div class="carousel-wrapper">
+    <div class="carousel" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "autoplay": true, "prevArrow": ".carousel-left-{{ banner.id }}", "nextArrow": ".carousel-right-{{ banner.id }}"}'>
+        {% for image in banner.images %}
+            <div class="carousel-item">
+                {% if image.hasLink %}
+                    <a href="{{ image.link }}">
+                        {% block image %}
+                            <img class="ui fluid image" src="{{ image.path|imagine_filter(filter|default('sylius_shop_product_original')) }}">
+                        {% endblock %}
+                    </a>
+                {% else %}
+                    {{ block('image') }}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="carousel-nav">
+        <button class="carousel-left-{{ banner.id }} ui huge black icon button">
+            <i class="left arrow icon"></i>
+        </button>
+        <button class="carousel-right-{{ banner.id }} ui huge black icon button">
+            <i class="right arrow icon"></i>
+        </button>
+    </div>
+</div>
+
+<style>
+    .carousel-left-{{ banner.id }},
+    .carousel-right-{{ banner.id }} {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .carousel-left-{{ banner.id }} {
+        left: 30px;
+    }
+
+    .carousel-right-{{ banner.id }} {
+        right: 30px;
+    }
+</style>

@@ -1,0 +1,12 @@
+sylius_resource:
+    resources:
+        jchr86_sylius_banner.banner:
+            classes:
+                model: Jchr86\SyliusBannerPlugin\Entity\Banner
+                form: Jchr86\SyliusBannerPlugin\Form\Type\BannerType
+                repository: Jchr86\SyliusBannerPlugin\Repository\BannerRepository
+
+        jchr86_sylius_banner.banner_image:
+            classes:
+                model: Jchr86\SyliusBannerPlugin\Entity\BannerImage
+                form: Jchr86\SyliusBannerPlugin\Form\Type\BannerImageType
