@@ -2,7 +2,7 @@ jchr86_banner_admin_banner:
     resource: |
         alias: jchr86_sylius_banner.banner
         section: admin
-        templates: SyliusAdmin:Crud
+        templates: "@SyliusAdmin/Crud"
         redirect: update
         grid: jchr86_sylius_banner_admin_banner
         vars:
